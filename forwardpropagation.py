@@ -30,9 +30,11 @@ class NeuralNet():
         return self.a2 #a2 is the Yhat
     
 #array of input data
+actualy = np.array(([75], [66], [89]), dtype=float)
 array = np.array(([3, 5], [5, 1], [10, 2]), dtype=float)
-#convert to standardized unit
+#convert to standardized unit(scaling)
 std = array/np.max(array, axis=0)
+actualy = actualy/100
 #observe forward propagation
 NN = NeuralNet(std)
 print(NN.forward())
