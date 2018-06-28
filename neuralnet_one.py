@@ -57,7 +57,7 @@ sw = np.array(([3, 5], [5, 1], [10, 2]), dtype=float)
 s1 = sw/np.max(sw, axis=0)
 s2 = scores/100
 
-for i in range(100):
+for i in range(1000):
 	NeuralNet(s1).train()																																	
 	cost = str(np.mean(np.square(s2 - NeuralNet(s1).forward())))
 	print("* Cost function \n", cost)
