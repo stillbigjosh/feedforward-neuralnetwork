@@ -57,6 +57,7 @@ sw = np.array(([3, 5], [5, 1], [10, 2]), dtype=float)
 s1 = sw/np.max(sw, axis=0)
 s2 = scores/100
 
+#training iteration process
 NN = NeuralNet(s1)
 for i in range(1000):
 	NN.train()																																	
