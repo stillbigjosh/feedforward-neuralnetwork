@@ -33,7 +33,7 @@ class NeuralNet():
     def sigmoidderiv(self, err):
         return err*(1-err)
     #backpropagation for training data
-    def backward(self):
+    def backprop(self):
         #error
         self.error = s1 - self.a2
         #error against sigmoid derivative of output
@@ -47,7 +47,7 @@ class NeuralNet():
         self.w1 += np.dot(sw.T, self.deltatwo)
     def train(self):
     	self.forward
-    	self.backward
+    	self.backprop
     def weights(self):
     	return self.w1, self.w2																				
  
@@ -57,12 +57,13 @@ sw = np.array(([3, 5], [5, 1], [10, 2]), dtype=float)
 s1 = sw/np.max(sw, axis=0)
 s2 = scores/100
 
+NN = NeuralNet(s1)
 for i in range(1000):
-	NeuralNet(s1).train()																																	
-	cost = str(np.mean(np.square(s2 - NeuralNet(s1).forward())))
+	NN.train()																																	
+	cost = str(np.mean(np.square(s2 - NN.forward())))
 	print("* Cost function \n", cost)
-	print("Weights \n", NeuralNet(s1).weights())
-	print("Predicted output \n", NeuralNet(s1).forward(), "\n Target output \n", s2)
+	print("Weights \n", NN.weights())
+	print("Predicted output \n", NN.forward(), "\n Target output \n", s2)
     
     
 
