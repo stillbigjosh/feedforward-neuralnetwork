@@ -3,5 +3,5 @@ The Python code build up from scratch of the Neural Network meant to predict the
 
 [sleep, study] >> [score]
 [3, 5] >> [75]
-[5, 1] >> [90]
-[10, 2] >> [56]
+[5, 10] >> [90]
+[3, 2] >> [56]
