@@ -28,8 +28,8 @@ def forward(x):
 def sigmoidderiv(sig):
     #derivative of sigmoid function
     return sig*(1-sig)
-#iteration process for backpropagation and subsequent training
-for i in range(20):
+#iteration process for feed forward, backpropagation and subsequent training - The Epoch
+for i in range(400):
     print("*Predicted output \n", forward(sd1))
     print("Target output \n", sd2)
     cost = np.mean(np.square(sd2 - forward(sd1)))
@@ -46,7 +46,10 @@ for i in range(20):
 #gradient descent scatter graph
 x = [a for a in range(20)]
 y = clist
-plt.scatter(x, y)
+plt.xlabel("Epoch")
+plt.ylabel("Cost function")
+plt.title("Training sample")
+plt.plot(x, y)
 plt.show()
 
 
