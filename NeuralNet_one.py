@@ -7,7 +7,7 @@ hiddenlayersize = 3
 outputlayersize = 1
 w1 = np.random.randn(inputlayersize, hiddenlayersize)
 w2 = np.random.randn(hiddenlayersize, outputlayersize)
-array = np.array(([3, 5], [5, 1], [10, 2]), dtype=float)
+array = np.array(([3, 5], [5, 10], [3, 2]), dtype=float)
 array2 = np.array(([75], [90], [56]), dtype=float)
 #scale inputs and target outputs
 sd1 = array/np.max(array, axis=0)
