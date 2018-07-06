@@ -45,7 +45,7 @@ for i in range(400):
     w1 += np.dot(sd2.T, d2)
     w2 += np.dot(a1.T, d1)
     clist.append(cost)
-#gradient descent scatter graph
+#gradient descent plot graph
 x = [a for a in range(400)]
 y = clist
 plt.plot(x, y)
