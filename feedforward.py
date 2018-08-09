@@ -1,4 +1,4 @@
-''' @author - ALOJOECEE '''
+''' author - Skywalker(@alojoecee)'''
 
 import numpy as np
 
