@@ -1,5 +1,5 @@
-# neuralnetwork
-The Python code build up from scratch of Feed Forward Neural Network meant to predict the test scores of students by their wake and study hours(linear regression).
+# Feed Forward Neural Network
+Feed Forward Neural Network meant to predict the test scores of students by their wake and study hours(linear regression).
 
 Ground truths.
 ['sleep', 'study'], [score]
